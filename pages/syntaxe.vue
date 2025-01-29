@@ -4,12 +4,14 @@ const rhinos = ref(null);
 function animateRhinos() {
   rhinos.value?.animate(
     [
-      { transform: 'translateX(-100vw)' },
-      { transform: 'translateX(100vw)' },
+      { transform: 'translateX(-70vw)' },
+      { transform: 'translateX(70vw)' },
     ],
     {
-      duration: 4000,
+      delay: 1000,
+      duration: 1500,
       iterations: Infinity,
+      ease: 'ease-in',
     }
   );
 }

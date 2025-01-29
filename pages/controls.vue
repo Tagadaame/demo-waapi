@@ -6,10 +6,14 @@ let animation;
 onMounted(() => {
   animation = rhinos.value?.animate(
     [
-    { transform: 'translateX(-100vw)' },
-    { transform: 'translateX(100vw)' },
+        { transform: 'translateX(-70vw)' },
+        { transform: 'translateX(70vw)' },
     ],
-    { duration: 6000, fill: 'forwards', iterations: Infinity }
+    { 
+        duration: 1500,
+        iterations: Infinity,
+        ease: 'ease-in',
+    }
   );
   animation.pause();
 });

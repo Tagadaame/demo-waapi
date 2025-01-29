@@ -9,11 +9,10 @@
             </details>
         </div>
     </section>
-  </template>
+</template>
   
-  <script setup>
-  import { onMounted, ref } from 'vue';
-  
+<script setup>
+
   const accordionItems = [
     {
       summary: 'Pourquoi les WAAPI sont cool',
@@ -117,6 +116,6 @@
     accordion.value = document.querySelectorAll('details');
     accordion.value.forEach((el) => new Accordion(el));
   });
-  </script>
+</script>
   
 
