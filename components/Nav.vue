@@ -8,7 +8,7 @@
             <NuxtLink to="/scroll">4</NuxtLink>
             <NuxtLink to="/tiles">5</NuxtLink>     
             <NuxtLink to="/accordion">6</NuxtLink>     
-
+            <NuxtLink to="/title">7</NuxtLink>     
         </div>
     </nav>
 </template>

@@ -12,7 +12,7 @@ onMounted(() => {
     { 
         duration: 1500,
         iterations: Infinity,
-        ease: 'ease-in',
+        fill: 'forwards',
     }
   );
   animation.pause();
@@ -32,7 +32,7 @@ function reverse() {
 <template>
   <div>
     <div ref="rhinos" class="w-80 h-auto mb-5"><Rhinos /></div>
-    <div class="flex gap-5">
+    <div class="grid grid-cols-3 gap-3 mt-5 p-3 bg-white rounded-lg">
         <button class="btn" @click="play">Play</button>
         <button class="btn" @click="pause">Pause</button>
         <button class="btn" @click="reverse">inverser</button>

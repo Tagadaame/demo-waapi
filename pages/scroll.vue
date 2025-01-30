@@ -7,19 +7,20 @@
     const bgColor = ref(colors[0]);
 
     onMounted(() => {
-    sections.value = document.querySelectorAll(".section");
+      sections.value = document.querySelectorAll(".section");
+      observer.value = new IntersectionObserver(
+          (entries) => {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+              bgColor.value = entry.target.dataset.color; 
+              }
+          });
+          },
+          { threshold: 0.6, root: container.value }
+      );
+      sections.value.forEach((section) => observer.value.observe(section));
 
-    observer.value = new IntersectionObserver(
-        (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-            bgColor.value = entry.target.dataset.color; 
-            }
-        });
-        },
-        { threshold: 0.6, root: container.value }
-    );
-    sections.value.forEach((section) => observer.value.observe(section));
+      
     });
 
     onUnmounted(() => {
