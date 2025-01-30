@@ -70,9 +70,7 @@ onUnmounted(() => {
         :key="i"
         class="section w-4/5 h-screen flex flex-col text-tealight items-start justify-center bg-white rounded-xl px-64"
       >
-        <h1 style=" transform: translateX(100px); opacity: 0 " class="text-3xl font-bold uppercase">Ceci est titre {{ i }}</h1>
-        <hr style=" transform: translateX(100px); opacity: 0 " class="w-20 my-10 h-3 bg-beige">
-        <h2 style=" transform: translateX(100px); opacity: 0 " class="text-lg font-light">Ceci est un sous titre {{ i  }}</h2>
+        <TestTitle :title="'coucou ' + i" :subTitle="'bobo ' + i " />
       </section>
     </div>
   </div>
