@@ -37,7 +37,7 @@ onMounted(() => {
               duration: 600,
               easing: "ease-out",
               delay: index * 150, 
-              fill: "forwards",
+              fill: "backwards",
             }
           );
         });
